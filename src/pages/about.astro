@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/BlogPost.astro'
+const GPG_KEY = ``
+---
+
+<Layout
+	title="About Me"
+	description="software engineer, unix expert and almost a mathematician"
+	pubDate={new Date('April 15 2023')}
+	updatedDate={new Date('April 15 2023')}
+	heroImage="/banner.jpg"
+>
+	<p>
+		Brazilian, low level and functional developer. You should expect of me
+		the weirdest hacks possible, functional purity, elegant code, CrabLang
+		and FP evangelism.
+	</p>
+
+	<h3>Contact can be made with:</h3>
+	<details>
+		<summary>Email</summary>
+		<a href="mailto:augusto@hatejs.dev">augusto@hatejs.dev</a>
+	</details>
+	<details>
+		<summary>GPG key</summary>
+		<pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEZDvXuRYJKwYBBAHaRw8BAQdAkFDXVtTwSrrzE66Wqp+RqxiY/afBfdv7VHe8
+sVUi5DO0I0F1Z3VzdG8gUGllcGVyIDxhdWd1c3RvQGhhdGVqcy5kZXY+iJkEExYK
+AEEWIQRucm3Pcv8wtOiaJe3WiSTOABd1YAUCZDvXuQIbAwUJA8JnAAULCQgHAgIi
+AgYVCgkICwIEFgIDAQIeBwIXgAAKCRDWiSTOABd1YDOnAP9qrvVLry/TOObBCWLN
+dfj0D9etmIj5cMdm5c4a3/Is+gD+IuwJ+e95+T6a6ADsqzC4XHdYxajBSOhvqMdO
+Tfo1LAC4OARkO9e5EgorBgEEAZdVAQUBAQdAlDt3qlf+67GmJAVtFLlAll+HlrqW
+2ghEOxSuG13SqlQDAQgHiH4EGBYKACYWIQRucm3Pcv8wtOiaJe3WiSTOABd1YAUC
+ZDvXuQIbDAUJA8JnAAAKCRDWiSTOABd1YIoAAP9nNazL7gfooPjWuABYUHtpP01E
+S9+hq2BWMoTotT9rTwEA0hTM0Gfk+i5ODZDcxpkIhPyraumxpVO3Y2WQRPrFrQw=
+=JZP9
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+		<button id="download-gpg">download</button>
+	</details>
+	<style>
+		pre {
+			margin: 1rem 0 0 0;
+			padding: 1rem;
+			background-color: #0d0d0d;
+			display: grid;
+			place-items: center;
+		}
+		details a {
+			margin: 1rem;
+		}
+		details button {
+			display: block;
+			margin: 0 auto;
+			margin-top: 1rem;
+			padding: 0.4rem;
+			font-family: 'terminess', sans-serif;
+			color: #f5f5f5;
+			background-color: #0d0d0d;
+		}
+	</style>
+	<script is:inline>
+		const GPG_KEY = `-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEZDvXuRYJKwYBBAHaRw8BAQdAkFDXVtTwSrrzE66Wqp+RqxiY/afBfdv7VHe8
+sVUi5DO0I0F1Z3VzdG8gUGllcGVyIDxhdWd1c3RvQGhhdGVqcy5kZXY+iJkEExYK
+AEEWIQRucm3Pcv8wtOiaJe3WiSTOABd1YAUCZDvXuQIbAwUJA8JnAAULCQgHAgIi
+AgYVCgkICwIEFgIDAQIeBwIXgAAKCRDWiSTOABd1YDOnAP9qrvVLry/TOObBCWLN
+dfj0D9etmIj5cMdm5c4a3/Is+gD+IuwJ+e95+T6a6ADsqzC4XHdYxajBSOhvqMdO
+Tfo1LAC4OARkO9e5EgorBgEEAZdVAQUBAQdAlDt3qlf+67GmJAVtFLlAll+HlrqW
+2ghEOxSuG13SqlQDAQgHiH4EGBYKACYWIQRucm3Pcv8wtOiaJe3WiSTOABd1YAUC
+ZDvXuQIbDAUJA8JnAAAKCRDWiSTOABd1YIoAAP9nNazL7gfooPjWuABYUHtpP01E
+S9+hq2BWMoTotT9rTwEA0hTM0Gfk+i5ODZDcxpkIhPyraumxpVO3Y2WQRPrFrQw=
+=JZP9
+-----END PGP PUBLIC KEY BLOCK-----\n`
+		document
+			.querySelector('#download-gpg')
+			?.addEventListener('click', (e) => {
+				e.preventDefault()
+				const filename = 'public-key.gpg'
+
+				const f = new File(GPG_KEY.split(''), filename)
+
+				const url = window.URL.createObjectURL(f)
+				const a = document.createElement('a')
+
+				a.style.display = 'none'
+				a.href = url
+				a.download = filename
+
+				a.click()
+				a.remove()
+				window.URL.revokeObjectURL(url)
+			})
+	</script>
+</Layout>

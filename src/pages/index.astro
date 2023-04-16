@@ -1,0 +1,107 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+
+const beastie = `
+               ,        ,
+              /(        )\`
+              \\ \\___   / |
+              /- _  \`-/  '
+             (/\\/ \\ \\   /\\
+             / /   | \`    \\
+             O O   ) /    |
+             \`-^--'\`<     '
+            (_.)  _  )   /
+             \`.___/\`    /
+               \`-----' /
+  <----.     __ / __   \\
+  <----|====O)))==) \) /====|
+  <----'    \`--' \`.__,' \\
+               |        |
+                \\       /       /\\
+           ______( (_  / \\______/
+         ,'  ,-----'   |
+         \`--{__________)
+`
+const freebased = `
+  ______
+ |  ____| __ ___  ___ 
+ | |__ | '__/ _ \\/ _ \\
+ |  __|| | |  __/  __/
+ | |   | | |    |    |
+ |_|   |_|  \\___|\\___|
+  ____   _____ _____
+ |  _ \\ / ____|  __ \\
+ | |_) | (___ | |  | |
+ |  _ < \\___ \\| |  | |
+ | |_) |____) | |__| |
+ |     |      |      |
+ |____/|_____/|_____/
+`
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>software engineer, unix expert and knife collector</h1>
+			<p>
+				Sometimes playing a bit low level with Rust and Zig, other times
+				developing garbage tools, but always reading papers and writing
+				shitty code.
+			</p>
+			<p>
+				I like to play with type theories and lang dev. Functional
+				programmer by default, no OOP allowed on this website.
+			</p>
+			<div class="random">
+				<img src="terry_davis.png" alt="terry davis on his van" />
+				<div class="freebased">
+					<pre>{beastie}</pre>
+					<pre>{freebased}</pre>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body><style>
+		h1 {
+			font-weight: 500;
+			text-align: center;
+			font-size: 1.2rem;
+		}
+		p {
+			text-indent: 1rem;
+		}
+		pre {
+			color: red;
+			font-size: 0.6rem;
+		}
+		.freebased {
+			display: flex;
+			align-items: flex-end;
+		}
+		.random {
+			display: flex;
+			align-items: center;
+		}
+		.random img {
+			width: 50%;
+			height: 50%;
+		}
+		@media (max-width: 600px) {
+			.random {
+				flex-direction: column;
+			}
+			.random img {
+				width: 70%;
+				height: 70%;
+			}
+		}
+	</style>
+</html>

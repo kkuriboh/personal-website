@@ -1,0 +1,21 @@
+{
+	"name": "personal-website",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"postbuild": "pagefind --source dist --bundle-dir pagefind",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/rss": "^2.3.2",
+		"@astrojs/sitemap": "^1.2.2",
+		"astro": "^2.2.3"
+	},
+	"devDependencies": {
+		"pagefind": "^0.12.0"
+	}
+}
