@@ -64,12 +64,15 @@ img {
 
 code {
 	padding: 2px 5px;
-	background-color: #060606;
+	background-color: #0d0d0d;
+	border-radius: 4px;
 }
 
 pre {
 	padding: 1rem;
 	border-radius: .2rem;
+	-moz-tab-size: 4;
+	tab-size: 4;
 }
 
 pre>code {
