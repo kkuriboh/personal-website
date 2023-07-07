@@ -1,33 +1,33 @@
 name: Deploy
 on:
-  push:
-    branches: main
-  pull_request:
-    branches: main
+    push:
+        branches: main
+    pull_request:
+        branches: main
 
 jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
+    deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+        permissions:
+            id-token: write
+            contents: read
 
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v3
+        steps:
+            - name: Clone repository
+              uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: lts/*
+            - name: Install Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: lts/*
 
-      - name: Build step
-        run: yarn && yarn build && yarn postbuild
+            - name: Build step
+              run: yarn && yarn build && yarn postbuild
 
-      - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "cheap-alpaca-36"
-          entrypoint: "https://deno.land/std@0.188.0/http/file_server.ts"
-          root: "dist"
+            - name: Upload to Deno Deploy
+              uses: denoland/deployctl@v1
+              with:
+                  project: 'cheap-alpaca-36'
+                  entrypoint: 'https://deno.land/std@0.188.0/http/file_server.ts'
+                  root: 'dist'

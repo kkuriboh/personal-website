@@ -70,12 +70,12 @@ code {
 
 pre {
 	padding: 1rem;
-	border-radius: .2rem;
+	border-radius: 0.2rem;
 	-moz-tab-size: 4;
 	tab-size: 4;
 }
 
-pre>code {
+pre > code {
 	all: unset;
 }
 

@@ -2,7 +2,7 @@
 title: 'Reject modern desktop, EMBRACE BSD!'
 description: 'Is BSD the BaSeD OS family for desktops? Yes, follow this article and discover why.'
 pubDate: 'Jul 22 2022'
-heroImage: '/blog/modern_desktop/bsd_hero.avif'
+heroImage: '/blog/modern_desktop/bsd_hero.webp'
 ---
 
 ## My experience with BSD
@@ -11,7 +11,7 @@ The experience I had with the BSD family was very pleasant, although, I couldn't
 
 FreeBSD is my OS of choice(would be OpenBSD if could install it), the system has everything I always wanted, security, stability and performance(also there are some BSDs that focus on performance aka DragonflyBSD). FreeBSD's memory management system is incredible, it's like OSX memory management without Apple's bullshit. I could setup almost every tools I use, the only exception was the lspinstaller plugin for neovim which depends on glibc, but that's not a huge problem, I can install my language servers by hand.
 
-<img src="/blog/modern_desktop/beastie.avif" alt="FreeBSD Mascot" />
+<img src="/blog/modern_desktop/beastie.webp" alt="FreeBSD Mascot" />
 
 ## Why BSD for desktop users?
 
@@ -23,7 +23,7 @@ For those who don't believe, most of the BSDs can be considered as "just works" 
 
 With the above information in mind, we conclude that BSDs are simple to install and use, have all the tools we need, they are super minimalist, it's FOSS, and can still maintain a good performance.
 
-<img src="/blog/modern_desktop/bsd_setup.avif" alt="FreeBSD desktop setup" />
+<img src="/blog/modern_desktop/bsd_setup.webp" alt="FreeBSD desktop setup" />
 
 ## What about servers? because yes
 
@@ -43,9 +43,9 @@ Although you should definitely try to get into the BSD communities and if possib
 
 ### Some links
 
-- [FreeBSD official website](https://www.freebsd.org/)
-- [The FreeBSD foundation](https://freebsdfoundation.org/)
-- [OpenBSD official website](https://www.openbsd.org/)
-- [The OpenBSD foundation](https://www.openbsdfoundation.org/)
-- [DragonFlyBSD official website](https://www.dragonflybsd.org/)
-- [NetBSD official website](https://www.netbsd.org)
+-   [FreeBSD official website](https://www.freebsd.org/)
+-   [The FreeBSD foundation](https://freebsdfoundation.org/)
+-   [OpenBSD official website](https://www.openbsd.org/)
+-   [The OpenBSD foundation](https://www.openbsdfoundation.org/)
+-   [DragonFlyBSD official website](https://www.dragonflybsd.org/)
+-   [NetBSD official website](https://www.netbsd.org)
