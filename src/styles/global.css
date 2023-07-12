@@ -1,6 +1,7 @@
 @font-face {
-	font-family: 'terminess';
-	src: url('/fonts/terminess.ttf');
+	font-family: 'terminus';
+	font-weight: normal;
+	src: url('/fonts/terminus.woff2') format('woff2');
 }
 
 * {
@@ -8,7 +9,7 @@
 }
 
 body {
-	font-family: 'terminess', sans-serif;
+	font-family: 'terminus', sans-serif;
 	margin: auto;
 	padding: 20px;
 	max-width: 80ch;
