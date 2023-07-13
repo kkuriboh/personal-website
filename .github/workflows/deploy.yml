@@ -29,5 +29,5 @@ jobs:
               uses: denoland/deployctl@v1
               with:
                   project: 'smallpp'
-                  entrypoint: 'https://deno.land/std@0.194.0/http/file_server.ts -H "content-encoding: br"'
+                  entrypoint: 'server.ts'
                   root: 'out'

@@ -7,7 +7,7 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"postbuild": "run-p postbuild:*",
+		"postbuild": "run-p postbuild:* && cp server.ts ./out/server.ts",
 		"postbuild:pagefind": "pagefind --source dist --bundle-dir pagefind",
 		"postbuild:compression": "gzipper c --brotli ./dist --output-file-format \"[filename].[ext]\" out",
 		"astro": "astro"
