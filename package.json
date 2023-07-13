@@ -7,7 +7,9 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"postbuild": "pagefind --source dist --bundle-dir pagefind",
+		"postbuild": "run-p postbuild:*",
+		"postbuild:pagefind": "pagefind --source dist --bundle-dir pagefind",
+		"postbuild:compression": "gzipper c --brotli ./dist --output-file-format \"[filename].[ext]\" out",
 		"astro": "astro"
 	},
 	"dependencies": {
@@ -16,6 +18,8 @@
 		"astro": "^2.2.3"
 	},
 	"devDependencies": {
+		"gzipper": "^7.2.0",
+		"npm-run-all": "^4.1.5",
 		"pagefind": "^0.12.0"
 	}
 }
