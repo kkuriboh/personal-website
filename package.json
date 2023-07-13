@@ -15,7 +15,8 @@
 	"dependencies": {
 		"@astrojs/rss": "^2.3.2",
 		"@astrojs/sitemap": "^1.2.2",
-		"astro": "^2.2.3"
+		"astro": "^2.2.3",
+		"astro-compress": "^1.1.49"
 	},
 	"devDependencies": {
 		"gzipper": "^7.2.0",
