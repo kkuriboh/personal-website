@@ -5,11 +5,14 @@ const today = new Date()
 <footer>
 	<div>
 		<p>
-			Help the ukrainian forces to fight the russian army, donate to the
-			soldiers at the international legion. <a
+			Please consider donating to the
+			<a href="https://tridentdefenseinitiative.com/">TDI</a> or to the guys fighting at the 
+			<a
 				target="_blank"
-				href="https://ildu.com.ua/">Slava Ukraini!</a
+				href="https://ildu.com.ua/">International Legion.</a
 			>
+			Together, we'll win this war.
+			<strong>Slava Ukraini!</strong>
 		</p>
 	</div>
 	&copy; {today.getFullYear()} Augusto Pieper. Free as in freedom, BSD-2 LICENSE.
@@ -32,6 +35,7 @@ const today = new Date()
 		color: #0d0d0d;
 		font-weight: bold;
 		padding: 0.6rem;
+		font-size: 0.9rem;
 	}
 	footer div::before {
 		content: ' ';
@@ -39,5 +43,8 @@ const today = new Date()
 		width: 100%;
 		height: 50%;
 		background-color: #005bbb;
+	}
+	footer strong {
+		color: black;
 	}
 </style>
