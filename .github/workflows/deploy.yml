@@ -22,8 +22,11 @@ jobs:
               with:
                   node-version: lts/*
 
+            - name: install pnpm # because yarn is fucking my builds
+              run: npm i -g pnpm
+
             - name: Build step
-              run: yarn && yarn build && yarn postbuild
+              run: pnpm i && pnpm build && pnpm postbuild
 
             - name: Upload to Deno Deploy
               uses: denoland/deployctl@v1
